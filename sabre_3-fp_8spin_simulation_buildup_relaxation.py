@@ -1,3 +1,25 @@
+"""
+sabre_3-fp_8spin_simulation_buildup_relaxation.py
+
+This script contains a large-scale spin dynamics simulation of the SABRE
+process when subjected to a static or rectangular polarisation transfer field.
+The script calculates and stores spin polarisation levels of each spin while
+applying fresh parahydrogen gas for 30 seconds and continues to record the
+polarisation levels for another 60 seconds after switching off the parahydrogen
+flow. This data is used to acquire T1 relaxation times and Tb build-up times.
+The results are saved as .txt files.
+
+The spin system consists of the following parts:
+- SABRE complex: hydride protons and one equatorial 3-fluoropyridine (8 spins)
+- Free ligand: 3-fluoropyridine in solution (6 spins)
+- Parahydrogen: Fresh parahydrogen gas supplied to the system (2 spins)
+
+Coherent spin dynamics along with non-linear kinetics and full Redfield-theory
+relaxation with the molecular dynamics approximated by isotropic rotational
+diffusion of a rigid molecule are implemented. All NMR interactions as well as
+scalar relaxation of the second kind are included.
+"""
+
 # Imports
 import os
 import spinguin as sg

@@ -1,3 +1,10 @@
+"""
+sabrefuncs.py
+
+This module contains functions that implement the SABRE hyperpolarisation at
+static or rectangular polarisation transfer fields.
+"""
+
 # Imports
 import numpy as np
 from tqdm.auto import tqdm
@@ -18,6 +25,9 @@ def sabre_buildup(
     kd_s : float,
     kd_H2 : float
 ):
+    """
+    Polarisation build-up in SABRE when subjected to a static magnetic field.
+    """
     # Take copies of the spin systems
     spin_system_c = deepcopy(spin_system_c)
     spin_system_s = deepcopy(spin_system_s)
@@ -119,6 +129,10 @@ def sabre_buildup_altfields(
         kd_s : float,
         kd_H2 : float
 ):
+    """
+    Polarisation build-up in SABRE when subjected to rectangular polarisation
+    transfer field.
+    """
     # Take copies of the spin systems
     spin_system_c = deepcopy(spin_system_c)
     spin_system_s = deepcopy(spin_system_s)
@@ -240,6 +254,9 @@ def sabre_relaxation(
         rho_c : np.ndarray,
         rho_s : np.ndarray
 ):
+    """
+    Relaxation of a SABRE system when subjected to a static magnetic field.
+    """
     # Take copies of the spin system
     spin_system_c = deepcopy(spin_system_c)
     spin_system_s = deepcopy(spin_system_s)
@@ -331,6 +348,9 @@ def sabre_relaxation_altfields(
         rho_c : np.ndarray,
         rho_s : np.ndarray
 ):
+    """
+    Relaxation of a SABRE system when subjected to a rectangular magnetic field.
+    """
     # Take copies of the spin system
     spin_system_c = deepcopy(spin_system_c)
     spin_system_s = deepcopy(spin_system_s)

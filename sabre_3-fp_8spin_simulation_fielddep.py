@@ -1,3 +1,27 @@
+"""
+sabre_3-fp_8spin_simulation_fielddep.py
+
+This script contains a large-scale spin dynamics simulation of the SABRE
+process when subjected to a rectangular polarisation transfer field. The
+script calculates spin polarisation levels of each spin after 30 seconds of
+SABRE hyperpolarisation using a variety of field parameters. The results are
+saved as .txt files.
+
+The spin system consists of the following parts:
+- SABRE complex: hydride protons and one equatorial 3-fluoropyridine (8 spins)
+- Free ligand: 3-fluoropyridine in solution (6 spins)
+- Parahydrogen: Fresh parahydrogen gas supplied to the system (2 spins)
+
+Coherent spin dynamics along with non-linear kinetics and full Redfield-theory
+relaxation with the molecular dynamics approximated by isotropic rotational
+diffusion of a rigid molecule are implemented. All NMR interactions as well as
+scalar relaxation of the second kind are included.
+
+NOTE: This script performs a lot of calculations. Running all calculations
+serially took a few days on a laptop with 11th generation Intel i5 processor
+and 16 GB of DDR4 RAM.
+"""
+
 # Imports
 import os
 import spinguin as sg
