@@ -7,3 +7,6 @@
 !*.ipynb
 !LICENSE
 !README.md
+
+!spin_system/
+!spin_system/*
